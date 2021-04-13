@@ -1,0 +1,87 @@
+#!/bin/bash
+
+# List Directory
+alias l='exa -a'
+alias la='exa -lagh'
+alias ll='exa -lah'
+alias ls='exa'
+alias lt='exa --tree --level=2'
+
+# Directory
+alias ~="cd ~"
+alias .="cd .."
+alias ..="cd ../.."
+alias ...="cd ../../.."
+alias ....="cd ../../../.."
+alias .....="cd ../../../../.."
+alias dev="cd ~/dev"
+alias work="cd ~/work"
+
+# VSCode
+alias c="code ."
+
+# Git
+alias g='git'
+alias ga='git add'
+alias gaa='git add .'
+alias gb='git branch'
+alias gcmsg='git commit -m'
+alias gcl='git clone'
+alias gc='git checkout'
+alias gcb='git checkout -b'
+alias gcm='git checkout master'
+alias gcdot='git checkout .'
+alias gf='git fetch -p'
+alias gd='git diff'
+alias gph='git push'
+alias gpl='git pull'
+alias gs='git status'
+
+# Docker
+alias d='docker'
+alias dps='docker ps'
+alias dpsa='docker ps -a'
+alias di='docker images'
+alias dl='docker logs'
+alias dlf='docker logs -f'
+alias dpl='docker pull'
+alias dph='docker push'
+alias ds='docker start'
+alias dr='docker restart'
+alias drm='docker rm'
+alias drmi='docker rmi'
+alias dnl='docker network ls'
+alias dsa='docker stop $(docker ps -q)'
+alias dra='docker restart $(docker ps -a -q)'
+
+# Docker Compose
+alias dc='docker-compose'
+alias dcps='docker-compose ps'
+alias dcu='docker-compose up'
+alias dcud='docker-compose up -d'
+alias dcudb='docker-compose up -d --build'
+alias dcstop='docker-compose stop'
+alias dcdn='docker-compose down'
+
+# Kubernetes
+alias k='kubectl'
+alias kgp='kubectl get pods'
+alias kgn='kubectl get nodes'
+alias kgs='kubectl get service'
+alias kgd='kubectl get deployments'
+alias kd='kubectl describe'
+alias ka='kubectl apply -f'
+alias kd='kubectl delete -f'
+
+# Tmux
+alias t="tmux"
+alias ta="t a -t"
+alias tls="t ls"
+alias tn="t new -t"
+alias ts="t new -s"
+alias tk="t kill-session -t"
+alias tka="tmux list-sessions | awk 'BEGIN{FS=":"}{print $1}' | xargs -n 1 tmux kill-session -t"
+
+# Python
+alias e='source env/bin/activate'
+alias py='python'
