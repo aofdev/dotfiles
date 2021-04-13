@@ -1,0 +1,13 @@
+#!/bin/bash
+
+s() {
+  if HOST=$(cat ~/.ssh/config | rg "Host "| sed -e "s/Host //g" | fzf); then
+    ssh $HOST
+  fi
+}
+
+kctx(){
+ if CONTEXT=$(kubectl config get-contexts -o=name | fzf); then
+   kubectl config use-context $CONTEXT
+ fi
+}
