@@ -1,0 +1,24 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+  ~/.aliases: .aliases
+  ~/.functions: .functions
+  ~/.zshrc: .zshrc
+  ~/.vimrc: .vimrc
+  ~/.tmux.conf: .tmux.conf
+
+- create:
+  - ~/dev
+  - ~/work
+
+- shell:
+  - command: ./setup_zsh.sh
+    stdout: true
+    stderr: true
+  - command: ./setup_homebrew.sh
+    stdout: true
+    stderr: true
