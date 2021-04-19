@@ -10,15 +10,16 @@
   ~/.zshrc: .zshrc
   ~/.vimrc: .vimrc
   ~/.tmux.conf: .tmux.conf
+  ~/.config/alacritty/alacritty.yml: alacritty.yml
 
 - create:
   - ~/dev
   - ~/work
 
 - shell:
-  - command: ./setup_zsh.sh
+  - command: ./setup_zsh.zsh
     stdout: true
     stderr: true
-  - command: ./setup_homebrew.sh
+  - command: ./setup_homebrew.zsh
     stdout: true
     stderr: true
