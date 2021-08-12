@@ -7,7 +7,19 @@ s() {
 }
 
 kctx(){
- if CONTEXT=$(kubectl config get-contexts -o=name | fzf); then
-   kubectl config use-context $CONTEXT
- fi
+  if CONTEXT=$(kubectl config get-contexts -o=name | fzf); then
+    kubectl config use-context $CONTEXT
+  fi
+}
+
+envs() {
+  local selected_env
+  selected_env=$(pyenv virtualenvs | awk '{print $1}' | fzf)
+  if [ -n "$selected_env"  ]; then
+    pyenv activate $selected_env
+  fi
+}
+
+reload() {
+  source $HOME/.zshrc
 }
