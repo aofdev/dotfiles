@@ -4,11 +4,15 @@ set -e
 
 CONFIG="install.conf.yaml"
 DOTBOT_DIR="dotbot"
-
 DOTBOT_BIN="bin/dotbot"
+TMUX_DIR=".tmux"
+TMUX_BIN="bin/.tmux"
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 cd "${BASEDIR}"
+git -C "${TMUX_DIR}" submodule sync --quiet --recursive
+git submodule update --init --recursive "${TMUX_BIN}"
+
 git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
