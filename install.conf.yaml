@@ -12,6 +12,7 @@
   ~/.tmux.conf: .tmux/.tmux.conf
   ~/.tmux.conf.local: .tmux/.tmux.conf.local
   ~/.config/alacritty/alacritty.yml: alacritty.yml
+  ~/.config/alacritty/dracula.yml: dracula.yml
 
 - create:
   - ~/dev
