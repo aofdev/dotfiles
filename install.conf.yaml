@@ -5,14 +5,14 @@
 - clean: ['~']
 
 - link:
-  ~/.aliases: .aliases
-  ~/.functions: .functions
-  ~/.zshrc: .zshrc
-  ~/.vimrc: .vimrc
-  ~/.tmux.conf: .tmux/.tmux.conf
-  ~/.tmux.conf.local: .tmux/.tmux.conf.local
-  ~/.config/alacritty/alacritty.yml: alacritty.yml
-  ~/.config/alacritty/dracula.yml: dracula.yml
+    ~/.aliases: .aliases
+    ~/.functions: .functions
+    ~/.zshrc: .zshrc
+    ~/.vimrc: .vimrc
+    ~/.tmux.conf: .tmux/.tmux.conf
+    ~/.tmux.conf.local: .tmux/.tmux.conf.local
+    ~/.config/alacritty/alacritty.yml: alacritty.yml
+    ~/.config/alacritty/dracula.yml: dracula.yml
 
 - create:
   - ~/dev
