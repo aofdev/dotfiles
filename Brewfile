@@ -114,3 +114,15 @@ brew "instrumenta/instrumenta/kubeval"
 brew "mongodb/brew/mongodb-database-tools"
 # The official CLI for Amazon EKS
 brew "weaveworks/tap/eksctl"
+
+# Cask programs
+cask "alacritty"
+cask "docker"
+cask "google-cloud-sdk"
+cask "google-chrome"
+cask "postman"
+cask "visual-studio-code"
+cask "robo-3t"
+cask "slack"
+cask "discord"
+cask "lens"
